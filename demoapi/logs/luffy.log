@@ -1,0 +1,7 @@
+INFO 2020-04-11 02:26:04,705 autoreload 24765 4320928640 Watching for file changes with StatReloader
+INFO 2020-04-11 02:26:15,195 basehttp 24765 123145486561280 "GET / HTTP/1.1" 200 16348
+INFO 2020-04-11 02:26:15,253 basehttp 24765 123145486561280 "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+INFO 2020-04-11 02:26:15,371 basehttp 24765 123145497071616 "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 85692
+INFO 2020-04-11 02:26:15,371 basehttp 24765 123145486561280 "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 86184
+INFO 2020-04-11 02:26:15,372 basehttp 24765 123145491816448 "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 85876
+WARNING 2020-04-11 02:26:15,429 basehttp 24765 123145491816448 "GET /favicon.ico HTTP/1.1" 404 1973

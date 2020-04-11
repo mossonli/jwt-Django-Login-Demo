@@ -73,13 +73,32 @@ WSGI_APPLICATION = 'demoapi.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
+# DATABASES = {
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.sqlite3',
+    #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    # }
+# }
+"""
+1 创建数据库
+create database luffy charset=utf-8;
+2 为数据库创建普通用户 luffy_user 密码为 luffy
+create user luffy_user identified by 'luffy'; #
+3 luffy下面所有的表 授予所有的权限 【% 表示所有的主机】
+grant all privileges on luffy.* to 'luffy_user'@'%';
+flush privileges; 
+"""
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'HOST': '127.0.0.1',
+        'PORT': 3306,
+        'USER': 'luffy_user',
+        'PASSWORD': 'luffy',
+        'NAME': 'luffy',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/2.2/ref/settings/#auth-password-validators
@@ -118,4 +137,76 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+# 日志配置
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    # 日志的格式
+    'formatters': {
+        'verbose': {
+            'format': '{levelname} {asctime} {module} {process:d} {thread:d} {message}',
+            'style': '{',
+        },
+        'simple': {
+            'format': '{levelname} {message}',
+            'style': '{',
+        },
+    },
+    # 日志的过滤信息
+    'filters': {
+        'special': {
+            # 这个special 应该怎么定义 ？？？？
+            # '()': 'project.logging.SpecialFilter',
+            # 'foo': 'bar',
+        },
+        'require_debug_true': {
+            '()': 'django.utils.log.RequireDebugTrue',
+        },
+    },
+    # 日志的处理方式
+    'handlers': {
+        'console': {
+            'level': 'INFO',
+            'filters': ['require_debug_true'],
+            'class': 'logging.StreamHandler',
+            'formatter': 'simple'
+        },
+        'mail_admins': {
+            'level': 'ERROR',
+            'class': 'django.utils.log.AdminEmailHandler',
+            'filters': ['special']
+        },
+        "file": {
+            'level': 'INFO',
+            'class': 'logging.handlers.RotatingFileHandler',
+            # 日志位置，日志存放的目录必须手动创建
+            'filename': os.path.join(os.path.dirname(BASE_DIR), 'logs/luffy.log'),
+            # 日志文件的最大值，这里设置的是300M
+            'maxBytes': 300 * 1024 * 1024,
+            # 日志文件的数量
+            'backupCount': 10,
+            # 日志的格式
+            'formatter': 'verbose'
+
+        }
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['console', 'file'],
+            'propagate': True,
+        },
+        'django.request': {
+            'handlers': ['mail_admins'],
+            'level': 'ERROR',
+            'propagate': False,
+        },
+        'myproject.custom': {
+            'handlers': ['console', 'mail_admins'],
+            'level': 'INFO',
+            'filters': ['special']
+        }
+    }
+}
 
