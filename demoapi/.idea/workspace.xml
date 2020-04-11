@@ -1,35 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="731ec5f7-1606-487c-afd1-efdaa6881fe3" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/../demopc/src/components/common/Banner.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demopc/src/components/common/Footer.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demopc/src/components/common/Header.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demopc/src/settings.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demopc/static/image/alex.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demopc/static/image/avatar1.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demopc/static/image/banner1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demopc/static/image/banner2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demopc/static/image/cart-yellow.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demopc/static/image/cart.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demopc/static/image/course-cover.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demopc/static/image/course_demo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demopc/static/image/detail_详情介绍.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demopc/static/image/detail_详情介绍2.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demopc/static/image/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demopc/static/image/member.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demopc/static/image/play-icon-gray.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../demopc/static/image/play-icon-yellow.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demoapi/apps/home/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/demoapi/apps/user/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demopc/src/components/Login.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demopc/static/image/Loginbg.3377d0c.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../demopc/static/image/Logotitle.1ba5466.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/demoapi.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/demoapi.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demoapi/settings/dev.py" beforeDir="false" afterPath="$PROJECT_DIR$/demoapi/settings/dev.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demoapi/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/demoapi/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/luffy.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/luffy.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demopc/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../demopc/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demopc/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../demopc/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demopc/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../demopc/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demopc/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../demopc/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demopc/src/components/common/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../demopc/src/components/common/Header.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../demopc/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../demopc/src/router/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -73,8 +74,11 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -117,34 +121,67 @@
       <option name="presentableId" value="Default" />
       <updated>1586568826841</updated>
       <workItem from="1586585247979" duration="11000" />
-      <workItem from="1586585274781" duration="3266000" />
+      <workItem from="1586585274781" duration="8228000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="WindowStateProjectService">
+    <state x="860" y="121" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586600170605">
+      <screen x="39" y="23" width="1641" height="1027" />
+    </state>
+    <state x="860" y="121" key="#com.intellij.execution.impl.EditConfigurationsDialog/39.23.1641.1027@39.23.1641.1027" timestamp="1586600170605" />
+    <state x="860" y="121" key="#com.intellij.execution.impl.EditConfigurationsDialog/40.23.1640.1027@40.23.1640.1027" timestamp="1586600011688" />
+    <state x="530" y="219" key="#com.intellij.execution.impl.EditConfigurationsDialog/42.23.1638.1027@42.23.1638.1027" timestamp="1586593749229" />
     <state x="658" y="278" key="FileChooserDialogImpl" timestamp="1586585322516">
       <screen x="37" y="23" width="1643" height="1027" />
     </state>
     <state x="658" y="278" key="FileChooserDialogImpl/37.23.1643.1027@37.23.1643.1027" timestamp="1586585322516" />
-    <state width="1358" height="258" key="GridCell.Tab.0.bottom" timestamp="1586591918258">
+    <state width="930" height="259" key="GridCell.Tab.0.bottom" timestamp="1586599961534">
       <screen x="40" y="23" width="1640" height="1027" />
     </state>
-    <state width="1358" height="258" key="GridCell.Tab.0.bottom/40.23.1640.1027@40.23.1640.1027" timestamp="1586591918258" />
-    <state width="1358" height="258" key="GridCell.Tab.0.center" timestamp="1586591918257">
+    <state width="1358" height="319" key="GridCell.Tab.0.bottom/39.23.1641.1027@39.23.1641.1027" timestamp="1586598680299" />
+    <state width="930" height="259" key="GridCell.Tab.0.bottom/40.23.1640.1027@40.23.1640.1027" timestamp="1586599961534" />
+    <state width="1358" height="557" key="GridCell.Tab.0.bottom/42.23.1638.1027@42.23.1638.1027" timestamp="1586593725540" />
+    <state width="1358" height="447" key="GridCell.Tab.0.bottom/43.23.1637.1027@43.23.1637.1027" timestamp="1586593938253" />
+    <state width="930" height="259" key="GridCell.Tab.0.center" timestamp="1586599961533">
       <screen x="40" y="23" width="1640" height="1027" />
     </state>
-    <state width="1358" height="258" key="GridCell.Tab.0.center/40.23.1640.1027@40.23.1640.1027" timestamp="1586591918257" />
-    <state width="1358" height="258" key="GridCell.Tab.0.left" timestamp="1586591918257">
+    <state width="1358" height="319" key="GridCell.Tab.0.center/39.23.1641.1027@39.23.1641.1027" timestamp="1586598680297" />
+    <state width="930" height="259" key="GridCell.Tab.0.center/40.23.1640.1027@40.23.1640.1027" timestamp="1586599961533" />
+    <state width="1358" height="557" key="GridCell.Tab.0.center/42.23.1638.1027@42.23.1638.1027" timestamp="1586593725539" />
+    <state width="1358" height="447" key="GridCell.Tab.0.center/43.23.1637.1027@43.23.1637.1027" timestamp="1586593938251" />
+    <state width="930" height="259" key="GridCell.Tab.0.left" timestamp="1586599961533">
       <screen x="40" y="23" width="1640" height="1027" />
     </state>
-    <state width="1358" height="258" key="GridCell.Tab.0.left/40.23.1640.1027@40.23.1640.1027" timestamp="1586591918257" />
-    <state width="1358" height="258" key="GridCell.Tab.0.right" timestamp="1586591918258">
+    <state width="1358" height="319" key="GridCell.Tab.0.left/39.23.1641.1027@39.23.1641.1027" timestamp="1586598680295" />
+    <state width="930" height="259" key="GridCell.Tab.0.left/40.23.1640.1027@40.23.1640.1027" timestamp="1586599961533" />
+    <state width="1358" height="557" key="GridCell.Tab.0.left/42.23.1638.1027@42.23.1638.1027" timestamp="1586593725539" />
+    <state width="1358" height="447" key="GridCell.Tab.0.left/43.23.1637.1027@43.23.1637.1027" timestamp="1586593938250" />
+    <state width="930" height="259" key="GridCell.Tab.0.right" timestamp="1586599961534">
       <screen x="40" y="23" width="1640" height="1027" />
     </state>
-    <state width="1358" height="258" key="GridCell.Tab.0.right/40.23.1640.1027@40.23.1640.1027" timestamp="1586591918258" />
+    <state width="1358" height="319" key="GridCell.Tab.0.right/39.23.1641.1027@39.23.1641.1027" timestamp="1586598680298" />
+    <state width="930" height="259" key="GridCell.Tab.0.right/40.23.1640.1027@40.23.1640.1027" timestamp="1586599961534" />
+    <state width="1358" height="557" key="GridCell.Tab.0.right/42.23.1638.1027@42.23.1638.1027" timestamp="1586593725540" />
+    <state width="1358" height="447" key="GridCell.Tab.0.right/43.23.1637.1027@43.23.1637.1027" timestamp="1586593938252" />
+    <state width="233" height="457" key="HiddenNamespacesPopup" timestamp="1586599902637">
+      <screen x="40" y="23" width="1640" height="1027" />
+    </state>
+    <state width="233" height="457" key="HiddenNamespacesPopup/40.23.1640.1027@40.23.1640.1027" timestamp="1586599902637" />
     <state x="380" y="155" key="SettingsEditor" timestamp="1586585333332">
       <screen x="37" y="23" width="1643" height="1027" />
     </state>

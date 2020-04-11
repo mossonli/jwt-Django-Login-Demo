@@ -29,7 +29,7 @@ CORS_ALLOW_CREDENTIALS = False # 阻止ajax跨域请求时携带cookie
 #解决跨域的插件 4
 MIDDLEWARE = [
     # 配合跨域的中间件【放在中间件的第一个位置】
-    'corsheaders.middleware.CorsMiddleware' 
+    'corsheaders.middleware.CorsMiddleware' ,
 		......
 ]
 ```

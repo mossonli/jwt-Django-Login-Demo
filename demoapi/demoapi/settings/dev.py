@@ -14,7 +14,10 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
+# BASE_DIR 项目的主应用目录
+# 把apps目录下面所有的子应用设置为可以直接导包，那就需要把apps设置为默认导包路径
+import sys
+sys.path.insert(0, os.path.join(BASE_DIR,"apps") )
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
@@ -43,14 +46,20 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # 解决跨域的插件 1
-    'corsheaders' # 相当于在Response(headers={"Access-Control-Allow-Origin":"客户端地址/*"})
+    'corsheaders', # 相当于在Response(headers={"Access-Control-Allow-Origin":"客户端地址/*"})
+    'rest_framework',
+    'crispy_forms',
+    'reversion',
 
+    # 自定义应用
+    'home',
+    'user',
 ]
 
 # 解决跨域的插件 2
 CORS_ORIGIN_WHITELIST = (
     # 在部分的cors_headers模块中，如果不带协议会导致客户端无法跨域需要配置"http://www.luffycity.cn:8080"
-    'www.luffycity.cn',
+    'http://www.luffycity.cn',
 )
 # 解决跨域的插件 3
 CORS_ALLOW_CREDENTIALS = False # 允许ajax跨域请求时携带cookie
@@ -58,7 +67,7 @@ CORS_ALLOW_CREDENTIALS = False # 允许ajax跨域请求时携带cookie
 MIDDLEWARE = [
     #解决跨域的插件 4
     # 配合跨域的中间件【放在中间件的第一个位置】
-    'corsheaders.middleware.CorsMiddleware' 
+    'corsheaders.middleware.CorsMiddleware',
     
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -101,11 +110,11 @@ WSGI_APPLICATION = 'demoapi.wsgi.application'
 # }
 """
 1 创建数据库
-create database luffy charset=utf-8;
-2 为数据库创建普通用户 luffy_user 密码为 luffy
-create user luffy_user identified by 'luffy'; #
+create database luffyjwt charset=utf8mb4;
+2 为数据库创建普通用户 luffyjwt 密码为 luffy
+create user luffyjwt identified by 'luffy';
 3 luffy下面所有的表 授予所有的权限 【% 表示所有的主机】
-grant all privileges on luffy.* to 'luffy_user'@'%';
+grant all privileges on luffyjwt.* to 'luffyjwt'@'%';
 flush privileges; 
 """
 
@@ -114,9 +123,9 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'HOST': '127.0.0.1',
         'PORT': 3306,
-        'USER': 'luffy_user',
+        'USER': 'luffyjwt',
         'PASSWORD': 'luffy',
-        'NAME': 'luffy',
+        'NAME': 'luffyjwt',
     }
 }
 
@@ -156,7 +165,17 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
+# 访问静态文件的url地址前缀
 STATIC_URL = '/static/'
+# 设置django的静态文件目录
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR,"static")
+]
+
+# 项目中存储上传文件的根目录[暂时配置]，注意，uploads目录需要手动创建否则上传文件时报错
+MEDIA_ROOT=os.path.join(BASE_DIR,"uploads")
+# 访问上传文件的url地址前缀
+MEDIA_URL ="/media/"
 
 
 # 日志配置
@@ -230,3 +249,20 @@ LOGGING = {
     }
 }
 
+REST_FRAMEWORK = {
+    # 异常处理
+    'EXCEPTION_HANDLER': 'demoapi.utils.exceptions.custom_exception_handler',
+}
+
+# 注册自定义用户模型，值的格式必须是： "应用名(子app的名字).模型类名"
+AUTH_USER_MODEL = "user.User"
+"""
+建议在数据迁移前一定要配置好AUTH_USER_MODEL，要不会迁移出错，出错的调整方式：
+0. 先把现有的数据库导出备份，然后清掉数据库中所有的数据表。
+1. 把开发者创建的所有子应用下面的migrations目录下除了__init__.py以外的所有迁移文件，只要涉及到用户的，一律删除
+2. 把django.contrib.admin.migrations目录下除了__init__.py以外的所有迁移文件，全部删除。
+3. 把django.contrib.auth.migrations目录下除了__init__.py以外的所有迁移文件，全部删除。
+4. 把reversion.migrations目录下除了__init__.py以外的所有迁移文件，全部删除。
+5. 把xadmin.migrations目录下除了__init__.py以外的所有迁移文件，全部删除。
+6. 接下来，执行数据迁移，回顾第0步中的数据，以后如果要修改用户相关数据，不需要重复本次操作，直接数据迁移即可。
+"""
