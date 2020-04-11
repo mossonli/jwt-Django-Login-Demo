@@ -25,7 +25,11 @@ SECRET_KEY = 'q7&*iw2c@wt025*0&jj@m%y_t3_&xxi)t4^5%fwuha*abvlyzf'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    # 想象我有域名（同时我修改了host文件的域名解析）
+    "api.luffycity.cn",
+    "www.luffycity.cn",
+]
 
 
 # Application definition
@@ -37,9 +41,25 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # 解决跨域的插件 1
+    'corsheaders' # 相当于在Response(headers={"Access-Control-Allow-Origin":"客户端地址/*"})
+
 ]
 
+# 解决跨域的插件 2
+CORS_ORIGIN_WHITELIST = (
+    # 在部分的cors_headers模块中，如果不带协议会导致客户端无法跨域需要配置"http://www.luffycity.cn:8080"
+    'www.luffycity.cn',
+)
+# 解决跨域的插件 3
+CORS_ALLOW_CREDENTIALS = False # 允许ajax跨域请求时携带cookie
+
 MIDDLEWARE = [
+    #解决跨域的插件 4
+    # 配合跨域的中间件【放在中间件的第一个位置】
+    'corsheaders.middleware.CorsMiddleware' 
+    
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
