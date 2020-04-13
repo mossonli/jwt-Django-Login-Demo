@@ -252,6 +252,19 @@ LOGGING = {
 REST_FRAMEWORK = {
     # 异常处理
     'EXCEPTION_HANDLER': 'demoapi.utils.exceptions.custom_exception_handler',
+    # jwt 的登录认证
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+    ),
+}
+
+import datetime
+# jwt认证
+JWT_AUTH = {
+    # jwt 的过期时间
+    'JWT_EXPIRATION_DELTA': datetime.timedelta(days=1),
 }
 
 # 注册自定义用户模型，值的格式必须是： "应用名(子app的名字).模型类名"

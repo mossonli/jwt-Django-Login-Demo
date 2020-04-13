@@ -12,25 +12,25 @@
           <span @click="login_type=1">短信登录</span>
         </div>
         <div class="inp" v-if="login_type==0">
-          <input v-model = "username" type="text" placeholder="用户名 / 手机号码" class="user">
-          <input v-model = "password" type="password" name="" class="pwd" placeholder="密码">
+          <input v-model="username" type="text" placeholder="用户名 / 手机号码" class="user">
+          <input v-model="password" type="password" name="" class="pwd" placeholder="密码">
           <div id="geetest1"></div>
           <div class="rember">
             <p>
-              <input type="checkbox" class="no" name="a"/>
+              <input type="checkbox" class="no" v-model="remember"/>
               <span>记住密码</span>
             </p>
             <p>忘记密码</p>
           </div>
-          <button class="login_btn">登录</button>
-          <p class="go_login" >没有账号 <span>立即注册</span></p>
+          <button class="login_btn" @click="loginHandler">登录</button>
+          <p class="go_login">没有账号 <span>立即注册</span></p>
         </div>
         <div class="inp" v-show="login_type==1">
-          <input v-model = "username" type="text" placeholder="手机号码" class="user">
-          <input v-model = "password"  type="text" class="pwd" placeholder="短信验证码">
+          <input v-model="username" type="text" placeholder="手机号码" class="user">
+          <input v-model="password" type="text" class="pwd" placeholder="短信验证码">
           <button id="get_code">获取验证码</button>
           <button class="login_btn">登录</button>
-          <p class="go_login" >没有账号 <span>立即注册</span></p>
+          <p class="go_login">没有账号 <span>立即注册</span></p>
         </div>
       </div>
     </div>
@@ -40,32 +40,70 @@
 <script>
   export default {
     name: 'Login',
-    data(){
+    data() {
       return {
         login_type: 0,
-        username:"",
-        password:"",
+        username: "",
+        password: "",
+        remember: false,
       }
     },
 
-    methods:{
+    methods: {
+      loginHander() {
+        // 用户密码账号登录
+        this.$axios.post(`${this.$settings.HOST}/user/login/`, {
+          username: this.username,
+          password: this.password,
+        }).then(response => {
+          if (this.remember) {
+            // 记住登录状态
+            sessionStorage.removeItem("user_token");
+            sessionStorage.removeItem("user_id");
+            sessionStorage.removeItem("user_name");
+            localStorage.user_token = response.data.token;
+            localStorage.user_id = response.data.id;
+            localStorage.user_name = response.data.username;
+          } else {
+            // 不记住登录状态
+            localStorage.removeItem("user_token");
+            localStorage.removeItem("user_id");
+            localStorage.removeItem("user_name");
+            sessionStorage.user_token = response.data.token;
+            sessionStorage.user_id = response.data.id;
+            sessionStorage.user_name = response.data.username;
+          }
 
+          // 页面跳转
+          let self = this;
+          this.$alert("登录成功!", "路飞学城", {
+            callback() {
+              self.$router.push("/");
+            }
+          });
+
+        }).catch(error => {
+          this.$message.error("对不起，登录失败！请确认密码或账号是否正确！");
+        });
+      },
     },
 
   };
 </script>
 
 <style scoped>
-  .box{
+  .box {
     width: 100%;
     height: 100%;
     position: relative;
     overflow: hidden;
   }
-  .box img{
+
+  .box img {
     width: 100%;
     min-height: 100%;
   }
+
   .box .login {
     position: absolute;
     width: 500px;
@@ -77,15 +115,18 @@
     bottom: 0;
     top: -338px;
   }
-  .login .login-title{
+
+  .login .login-title {
     width: 100%;
     text-align: center;
   }
-  .login-title img{
+
+  .login-title img {
     width: 190px;
     height: auto;
   }
-  .login-title p{
+
+  .login-title p {
     font-family: PingFangSC-Regular;
     font-size: 18px;
     color: #fff;
@@ -93,16 +134,18 @@
     padding-top: 10px;
     padding-bottom: 50px;
   }
-  .login_box{
+
+  .login_box {
     width: 400px;
     height: auto;
     background: #fff;
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,.5);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .5);
     border-radius: 4px;
     margin: 0 auto;
     padding-bottom: 40px;
   }
-  .login_box .title{
+
+  .login_box .title {
     font-size: 20px;
     color: #9b9b9b;
     letter-spacing: .32px;
@@ -113,16 +156,18 @@
     margin-bottom: 20px;
     cursor: pointer;
   }
-  .login_box .title span:nth-of-type(1){
+
+  .login_box .title span:nth-of-type(1) {
     color: #4a4a4a;
     border-bottom: 2px solid #84cc39;
   }
 
-  .inp{
+  .inp {
     width: 350px;
     margin: 0 auto;
   }
-  .inp input{
+
+  .inp input {
     border: 0;
     outline: 0;
     width: 100%;
@@ -133,17 +178,20 @@
     font-size: 14px;
     background: #fff !important;
   }
-  .inp input.user{
+
+  .inp input.user {
     margin-bottom: 16px;
   }
-  .inp .rember{
+
+  .inp .rember {
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
     margin-top: 10px;
   }
-  .inp .rember p:first-of-type{
+
+  .inp .rember p:first-of-type {
     font-size: 12px;
     color: #4a4a4a;
     letter-spacing: .19px;
@@ -154,14 +202,15 @@
     align-items: center;
     /*position: relative;*/
   }
-  .inp .rember p:nth-of-type(2){
+
+  .inp .rember p:nth-of-type(2) {
     font-size: 14px;
     color: #9b9b9b;
     letter-spacing: .19px;
     cursor: pointer;
   }
 
-  .inp .rember input{
+  .inp .rember input {
     outline: 0;
     width: 30px;
     height: 45px;
@@ -172,7 +221,7 @@
     background: #fff !important;
   }
 
-  .inp .rember p span{
+  .inp .rember p span {
     display: inline-block;
     font-size: 12px;
     width: 100px;
@@ -180,10 +229,12 @@
     /*left: 20px;*/
 
   }
-  #geetest{
+
+  #geetest {
     margin-top: 20px;
   }
-  .login_btn{
+
+  .login_btn {
     width: 100%;
     height: 45px;
     background: #84cc39;
@@ -193,14 +244,16 @@
     letter-spacing: .26px;
     margin-top: 30px;
   }
-  .inp .go_login{
+
+  .inp .go_login {
     text-align: center;
     font-size: 14px;
     color: #9b9b9b;
     letter-spacing: .26px;
     padding-top: 20px;
   }
-  .inp .go_login span{
+
+  .inp .go_login span {
     color: #84cc39;
     cursor: pointer;
   }
