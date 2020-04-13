@@ -73,7 +73,6 @@
             sessionStorage.user_id = response.data.id;
             sessionStorage.user_name = response.data.username;
           }
-
           // 页面跳转
           let self = this;
           this.$alert("登录成功!", "路飞学城", {
