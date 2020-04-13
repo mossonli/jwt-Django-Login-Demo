@@ -62,7 +62,7 @@ CORS_ORIGIN_WHITELIST = (
     'http://www.luffycity.cn',
 )
 # 解决跨域的插件 3
-CORS_ALLOW_CREDENTIALS = False # 允许ajax跨域请求时携带cookie
+CORS_ALLOW_CREDENTIALS = False # 阻止ajax跨域请求时携带cookie
 
 MIDDLEWARE = [
     #解决跨域的插件 4
