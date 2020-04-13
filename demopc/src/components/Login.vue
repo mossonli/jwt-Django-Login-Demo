@@ -48,7 +48,6 @@
         remember: false,
       }
     },
-
     methods: {
       loginHander() {
         // 用户密码账号登录
