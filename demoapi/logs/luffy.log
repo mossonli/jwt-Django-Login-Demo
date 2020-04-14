@@ -181,3 +181,9 @@ INFO 2020-04-13 08:37:42,236 autoreload 56066 140735710675840 Watching for file 
 INFO 2020-04-13 08:37:42,677 autoreload 56068 4320928640 Watching for file changes with StatReloader
 INFO 2020-04-13 08:39:25,703 autoreload 56066 140735710675840 /Users/mosson/Documents/ImmediatelyToLearn/jwt-Django-Login-Demo/demoapi/demoapi/apps/user/urls.py changed, reloading.
 INFO 2020-04-13 08:39:26,541 autoreload 56085 140735710675840 Watching for file changes with StatReloader
+INFO 2020-04-14 05:55:49,091 autoreload 56068 4320928640 /Users/mosson/Documents/ImmediatelyToLearn/jwt-Django-Login-Demo/demoapi/demoapi/settings/dev.py changed, reloading.
+INFO 2020-04-14 05:55:50,008 autoreload 62298 4320928640 Watching for file changes with StatReloader
+INFO 2020-04-14 05:57:43,390 autoreload 62298 4320928640 /Users/mosson/Documents/ImmediatelyToLearn/jwt-Django-Login-Demo/demoapi/demoapi/settings/dev.py changed, reloading.
+INFO 2020-04-14 05:57:43,800 autoreload 62331 4320928640 Watching for file changes with StatReloader
+INFO 2020-04-14 05:59:48,391 autoreload 62331 4320928640 /Users/mosson/Documents/ImmediatelyToLearn/jwt-Django-Login-Demo/demoapi/demoapi/settings/dev.py changed, reloading.
+INFO 2020-04-14 05:59:49,106 autoreload 62363 4320928640 Watching for file changes with StatReloader

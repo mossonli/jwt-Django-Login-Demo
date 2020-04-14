@@ -265,6 +265,9 @@ import datetime
 JWT_AUTH = {
     # jwt 的过期时间
     'JWT_EXPIRATION_DELTA': datetime.timedelta(days=1),
+    # 设置jwt的返回函数
+    'JWT_RESPONSE_PAYLOAD_HANDLER': 'user.utils.jwt_response_payload_handler'
+
 }
 
 # 注册自定义用户模型，值的格式必须是： "应用名(子app的名字).模型类名"

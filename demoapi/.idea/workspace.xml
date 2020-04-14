@@ -20,8 +20,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="731ec5f7-1606-487c-afd1-efdaa6881fe3" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/demoapi/apps/user/utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demoapi/apps/user/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/demoapi/apps/user/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demoapi/apps/user/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/demoapi/apps/user/tests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demoapi/settings/dev.py" beforeDir="false" afterPath="$PROJECT_DIR$/demoapi/settings/dev.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/luffy.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/luffy.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../jwt的使用.md" beforeDir="false" afterPath="$PROJECT_DIR$/../jwt的使用.md" afterDir="false" />
@@ -78,7 +79,29 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.tests">
+    <configuration name="tests" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="demoapi" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/demoapi/apps/user" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/demoapi/apps/user/tests.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="demoapi" type="Python.DjangoServer" factoryName="Django server">
       <module name="demoapi" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -102,6 +125,11 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.tests" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -114,7 +142,7 @@
       <option name="presentableId" value="Default" />
       <updated>1586568826841</updated>
       <workItem from="1586585247979" duration="11000" />
-      <workItem from="1586585274781" duration="10872000" />
+      <workItem from="1586585274781" duration="16884000" />
     </task>
     <servers />
   </component>
@@ -143,31 +171,47 @@
       <screen x="37" y="23" width="1643" height="1027" />
     </state>
     <state x="658" y="278" key="FileChooserDialogImpl/37.23.1643.1027@37.23.1643.1027" timestamp="1586585322516" />
-    <state width="1358" height="260" key="GridCell.Tab.0.bottom" timestamp="1586600447097">
-      <screen x="39" y="23" width="1641" height="1027" />
+    <state width="1358" height="219" key="GridCell.Tab.0.bottom" timestamp="1586835949160">
+      <screen x="35" y="23" width="1645" height="1027" />
     </state>
-    <state width="1358" height="260" key="GridCell.Tab.0.bottom/39.23.1641.1027@39.23.1641.1027" timestamp="1586600447097" />
+    <state width="1358" height="219" key="GridCell.Tab.0.bottom/35.23.1645.1027@35.23.1645.1027" timestamp="1586835949160" />
+    <state width="1358" height="219" key="GridCell.Tab.0.bottom/36.23.1644.1027@36.23.1644.1027" timestamp="1586826588918" />
+    <state width="1358" height="219" key="GridCell.Tab.0.bottom/37.23.1643.1027@37.23.1643.1027" timestamp="1586834954890" />
+    <state width="1358" height="219" key="GridCell.Tab.0.bottom/38.23.1642.1027@38.23.1642.1027" timestamp="1586833619045" />
+    <state width="1358" height="219" key="GridCell.Tab.0.bottom/39.23.1641.1027@39.23.1641.1027" timestamp="1586829659212" />
     <state width="930" height="259" key="GridCell.Tab.0.bottom/40.23.1640.1027@40.23.1640.1027" timestamp="1586599961534" />
     <state width="1358" height="557" key="GridCell.Tab.0.bottom/42.23.1638.1027@42.23.1638.1027" timestamp="1586593725540" />
     <state width="1358" height="447" key="GridCell.Tab.0.bottom/43.23.1637.1027@43.23.1637.1027" timestamp="1586593938253" />
-    <state width="1358" height="260" key="GridCell.Tab.0.center" timestamp="1586600447096">
-      <screen x="39" y="23" width="1641" height="1027" />
+    <state width="1358" height="219" key="GridCell.Tab.0.center" timestamp="1586835949159">
+      <screen x="35" y="23" width="1645" height="1027" />
     </state>
-    <state width="1358" height="260" key="GridCell.Tab.0.center/39.23.1641.1027@39.23.1641.1027" timestamp="1586600447096" />
+    <state width="1358" height="219" key="GridCell.Tab.0.center/35.23.1645.1027@35.23.1645.1027" timestamp="1586835949159" />
+    <state width="1358" height="219" key="GridCell.Tab.0.center/36.23.1644.1027@36.23.1644.1027" timestamp="1586826588917" />
+    <state width="1358" height="219" key="GridCell.Tab.0.center/37.23.1643.1027@37.23.1643.1027" timestamp="1586834954890" />
+    <state width="1358" height="219" key="GridCell.Tab.0.center/38.23.1642.1027@38.23.1642.1027" timestamp="1586833619044" />
+    <state width="1358" height="219" key="GridCell.Tab.0.center/39.23.1641.1027@39.23.1641.1027" timestamp="1586829659211" />
     <state width="930" height="259" key="GridCell.Tab.0.center/40.23.1640.1027@40.23.1640.1027" timestamp="1586599961533" />
     <state width="1358" height="557" key="GridCell.Tab.0.center/42.23.1638.1027@42.23.1638.1027" timestamp="1586593725539" />
     <state width="1358" height="447" key="GridCell.Tab.0.center/43.23.1637.1027@43.23.1637.1027" timestamp="1586593938251" />
-    <state width="1358" height="260" key="GridCell.Tab.0.left" timestamp="1586600447095">
-      <screen x="39" y="23" width="1641" height="1027" />
+    <state width="1358" height="219" key="GridCell.Tab.0.left" timestamp="1586835949159">
+      <screen x="35" y="23" width="1645" height="1027" />
     </state>
-    <state width="1358" height="260" key="GridCell.Tab.0.left/39.23.1641.1027@39.23.1641.1027" timestamp="1586600447095" />
+    <state width="1358" height="219" key="GridCell.Tab.0.left/35.23.1645.1027@35.23.1645.1027" timestamp="1586835949159" />
+    <state width="1358" height="219" key="GridCell.Tab.0.left/36.23.1644.1027@36.23.1644.1027" timestamp="1586826588917" />
+    <state width="1358" height="219" key="GridCell.Tab.0.left/37.23.1643.1027@37.23.1643.1027" timestamp="1586834954889" />
+    <state width="1358" height="219" key="GridCell.Tab.0.left/38.23.1642.1027@38.23.1642.1027" timestamp="1586833619044" />
+    <state width="1358" height="219" key="GridCell.Tab.0.left/39.23.1641.1027@39.23.1641.1027" timestamp="1586829659211" />
     <state width="930" height="259" key="GridCell.Tab.0.left/40.23.1640.1027@40.23.1640.1027" timestamp="1586599961533" />
     <state width="1358" height="557" key="GridCell.Tab.0.left/42.23.1638.1027@42.23.1638.1027" timestamp="1586593725539" />
     <state width="1358" height="447" key="GridCell.Tab.0.left/43.23.1637.1027@43.23.1637.1027" timestamp="1586593938250" />
-    <state width="1358" height="260" key="GridCell.Tab.0.right" timestamp="1586600447096">
-      <screen x="39" y="23" width="1641" height="1027" />
+    <state width="1358" height="219" key="GridCell.Tab.0.right" timestamp="1586835949160">
+      <screen x="35" y="23" width="1645" height="1027" />
     </state>
-    <state width="1358" height="260" key="GridCell.Tab.0.right/39.23.1641.1027@39.23.1641.1027" timestamp="1586600447096" />
+    <state width="1358" height="219" key="GridCell.Tab.0.right/35.23.1645.1027@35.23.1645.1027" timestamp="1586835949160" />
+    <state width="1358" height="219" key="GridCell.Tab.0.right/36.23.1644.1027@36.23.1644.1027" timestamp="1586826588918" />
+    <state width="1358" height="219" key="GridCell.Tab.0.right/37.23.1643.1027@37.23.1643.1027" timestamp="1586834954890" />
+    <state width="1358" height="219" key="GridCell.Tab.0.right/38.23.1642.1027@38.23.1642.1027" timestamp="1586833619045" />
+    <state width="1358" height="219" key="GridCell.Tab.0.right/39.23.1641.1027@39.23.1641.1027" timestamp="1586829659212" />
     <state width="930" height="259" key="GridCell.Tab.0.right/40.23.1640.1027@40.23.1640.1027" timestamp="1586599961534" />
     <state width="1358" height="557" key="GridCell.Tab.0.right/42.23.1638.1027@42.23.1638.1027" timestamp="1586593725540" />
     <state width="1358" height="447" key="GridCell.Tab.0.right/43.23.1637.1027@43.23.1637.1027" timestamp="1586593938252" />
@@ -179,5 +223,8 @@
       <screen x="37" y="23" width="1643" height="1027" />
     </state>
     <state x="380" y="155" key="SettingsEditor/37.23.1643.1027@37.23.1643.1027" timestamp="1586585333332" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/demoapi$tests.coverage" NAME="tests Coverage Results" MODIFIED="1586834954881" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/demoapi/apps/user" />
   </component>
 </project>
