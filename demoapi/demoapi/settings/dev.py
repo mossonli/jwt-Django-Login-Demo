@@ -282,3 +282,7 @@ AUTH_USER_MODEL = "user.User"
 5. 把xadmin.migrations目录下除了__init__.py以外的所有迁移文件，全部删除。
 6. 接下来，执行数据迁移，回顾第0步中的数据，以后如果要修改用户相关数据，不需要重复本次操作，直接数据迁移即可。
 """
+# 多条件用户登录配置
+AUTHENTICATION_BACKENDS = [
+    'user.utils.UsernameMobileAuthBackend',
+]

@@ -20,12 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="731ec5f7-1606-487c-afd1-efdaa6881fe3" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/demoapi/apps/user/utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/demoapi/apps/user/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/demoapi/apps/user/tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/demoapi/apps/user/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/demoapi/apps/user/utils.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/demoapi/settings/dev.py" beforeDir="false" afterPath="$PROJECT_DIR$/demoapi/settings/dev.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/luffy.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/luffy.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jwt的使用.md" beforeDir="false" afterPath="$PROJECT_DIR$/../jwt的使用.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +140,7 @@
       <option name="presentableId" value="Default" />
       <updated>1586568826841</updated>
       <workItem from="1586585247979" duration="11000" />
-      <workItem from="1586585274781" duration="16884000" />
+      <workItem from="1586585274781" duration="17744000" />
     </task>
     <servers />
   </component>
